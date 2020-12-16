@@ -26,7 +26,7 @@
                         <div class="col-md-6">
                             <div class="card profile">
                                 <div class="profile__img">
-                                    <img src="{{ Auth::user()->avatar }}" alt="Profile Avatar" id="profile_avatar">
+                                    <img src="{{ url(Auth::user()->avatar) }}" alt="Profile Avatar" id="profile_avatar">
                                     <a href="javascript:" class="zwicon-camera profile__img__edit" onclick="$('#crop-image-modal').modal()"></a>
                                 </div>
 

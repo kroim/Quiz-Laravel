@@ -1,5 +1,7 @@
-RewriteEngine on
 <IfModule mod_rewrite.c>
-    RewriteEngine On
-	RewriteRule ^(.*)$ public/$1 [L]
+	RewriteEngine on
+	RewriteCond %{HTTP_HOST} ^localhost$ [NC,OR]
+	RewriteCond %{HTTP_HOST} ^localhost$
+	RewriteCond %{REQUEST_URI} !quiz-laravel/
+	RewriteRule (.*) /quiz-laravel/$1 [L]
 </IfModule>

@@ -83,7 +83,8 @@ $(function () {
     });
     $('#login_account').on('submit', function (e) {
         e.preventDefault();
-        var url = '/login';
+        let APP_URL = $('meta[name="_base_url"]').attr('content');
+        var url = APP_URL + '/login';
         var login_email = $('#login_email').val();
         if (login_email === '') {
             customAlert(auth_messages[2]);
@@ -113,7 +114,7 @@ $(function () {
                 if (res.status === 'success') {
                     customAlert(res.message, true);
                     $('#login_modal').modal('toggle');
-                    location.href = '/user/my-account'
+                    location.href = APP_URL + '/user/my-account'
                 } else customAlert(res.message);
             }
         })

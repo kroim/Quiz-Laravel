@@ -6,6 +6,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="format-detection" content="telephone=no">
     <title>{{ __('global.global_title') }}</title>
+    <meta name="_base_url" content="{{ url('/') }}">
     <link rel="shortcut icon" type="image/x-icon" href="{{ url('/assets/image/favicon.ico') }}">
     <!-- Vendor styles -->
     <link rel="stylesheet" href="{{ url('/resources/vendors/zwicon/zwicon.min.css') }}">
